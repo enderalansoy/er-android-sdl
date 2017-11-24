@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rlHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:padding="@dimen/small_padding">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:id="@+id/llSourceButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_white_button"
+                    android:clickable="true"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/medium_padding">
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_source"/>
+
+                    <TextView
+                        android:id="@+id/tvSource"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/small_padding"
+                        android:maxLines="1"
+                        android:text="@string/main_fragment_source_location_default_label"/>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/very_small_padding"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:id="@+id/llDestinationButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_white_button"
+                    android:clickable="true"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/medium_padding">
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_destination"/>
+
+                    <TextView
+                        android:id="@+id/tvDestination"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/small_padding"
+                        android:maxLines="1"
+                        android:text="@string/main_fragment_destination_location_default_label"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@id/ll"
+            android:layout_marginBottom="42dp"
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="@dimen/large_padding"
+            android:layout_marginTop="42dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_arrow_down"/>
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_arrow_down"/>
+
+        </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabRoute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/small_padding"
+            android:background="@drawable/selector_white_circle_button"
+            android:src="@drawable/ic_route"
+            app:backgroundTint="@color/primary"
+            app:fabSize="mini"
+            app:useCompatPadding="true"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_toLeftOf="@id/fabRoute"
+            android:background="@drawable/selector_white_circle_button"
+            android:src="@drawable/ic_switch"
+            app:backgroundTint="@color/white"
+            app:fabSize="mini"
+            app:useCompatPadding="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llFooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:elevation="4dp"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/small_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main_fragment_traffic_forecast_label"/>
+
+            <TextView
+                android:id="@+id/tvDateTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="17 Subat 2017"
+                android:textColor="@color/primary"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/small_padding">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:src="@drawable/bg_time_indicator_dark"/>
+
+            <antistatic.spinnerwheel.WheelHorizontalView
+                android:id="@+id/wvTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:itemsDimmedAlpha="90"
+                app:selectionDivider="@color/black"
+                app:selectionDividerActiveAlpha="20"
+                app:selectionDividerDimmedAlpha="50"
+                app:selectionDividerWidth="0dp"
+                app:visibleItems="5"/>
+
+        </FrameLayout>
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

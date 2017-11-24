@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent">
+
+    <com.easyroute.ui.view.RouteOptionTabLayout
+        android:id="@+id/routeOptionTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/llFooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/medium_padding"
+        android:paddingTop="@dimen/medium_padding">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/large_padding">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:src="@drawable/bg_time_indicator_dark"/>
+
+            <antistatic.spinnerwheel.WheelHorizontalView
+                android:id="@+id/wvTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:itemsDimmedAlpha="90"
+                app:selectionDivider="@color/black"
+                app:selectionDividerActiveAlpha="20"
+                app:selectionDividerDimmedAlpha="50"
+                app:selectionDividerWidth="0dp"
+                app:visibleItems="5"/>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/small_padding"
+            android:layout_marginRight="@dimen/small_padding"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/small_padding">
+
+                <TextView
+                    android:id="@+id/tvEstimatedLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/route_fragment_estimated_arrival_label"
+                    android:textSize="@dimen/small_text_size"/>
+
+                <TextView
+                    android:id="@+id/tvEstimatedTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/small_padding"
+                    android:text="02:30"
+                    android:textColor="@color/primary"
+                    android:textSize="@dimen/large_text_size"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/divider"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/small_padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/route_fragment_average_speed_label"
+                    android:textSize="@dimen/small_text_size"/>
+
+                <TextView
+                    android:id="@+id/tvAverageSpeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/small_padding"
+                    android:text="35"
+                    android:textSize="@dimen/large_text_size"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/very_small_padding"
+                    android:text="@string/route_fragment_speed_unit"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/divider"/>
+
+        <TextView
+            android:id="@+id/tvEnterVehicleInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/small_padding"
+            android:layout_marginRight="@dimen/small_padding"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/medium_padding"
+            android:text="@string/route_fragment_enter_vehicle_info_label"
+            android:textSize="@dimen/small_text_size"/>
+
+        <LinearLayout
+            android:id="@+id/llRouteCost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/small_padding"
+            android:layout_marginRight="@dimen/small_padding"
+            android:background="@drawable/selector_white_button"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/small_padding">
+
+            <LinearLayout
+                android:id="@+id/llRoadFares"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/route_fragment_road_fares_label"
+                    android:textSize="@dimen/small_text_size"/>
+
+                <TextView
+                    android:id="@+id/tvRoadFares"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/small_padding"
+                    android:text="-"
+                    android:textSize="@dimen/large_text_size"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_vehicle_settings"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvFuelCostLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/route_fragment_fuel_cost_label"
+                    android:textSize="@dimen/small_text_size"/>
+
+                <TextView
+                    android:id="@+id/tvFuelCost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/small_padding"
+                    android:text="-"
+                    android:textSize="@dimen/large_text_size"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/flTimeOptionContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:padding="@dimen/small_padding"
+        app:layout_anchor="@id/llFooter">
+
+        <com.easyroute.ui.view.StickyTab
+            android:id="@+id/stTimeOption"
+            android:layout_width="240dp"
+            android:layout_height="36dp"
+            android:elevation="1dp"/>
+
+    </FrameLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabNavigate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_navigation"
+        app:backgroundTint="@color/primary"
+        app:layout_anchor="@id/llFooter"
+        app:layout_anchorGravity="top|end"
+        app:useCompatPadding="true"/>
+
+    <TextView
+        android:id="@+id/tvStartNavigation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_padding"
+        android:text="@string/route_fragment_start_navigation_label"
+        android:textColor="@color/primary"
+        android:textStyle="bold"
+        app:layout_anchor="@id/fabNavigate"
+        app:layout_anchorGravity="bottom|center_horizontal"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabMyLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_marginBottom="150dp"
+        android:src="@drawable/ic_my_location_dark"
+        app:backgroundTint="@color/white"
+        app:layout_anchor="@id/fabNavigate"
+        app:layout_anchorGravity="top"
+        app:useCompatPadding="true"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:src="@drawable/ic_options"
+        app:backgroundTint="@color/black"
+        app:layout_anchor="@id/fabMyLocation"
+        app:layout_anchorGravity="top"
+        app:useCompatPadding="true"/>
+
+</android.support.design.widget.CoordinatorLayout>

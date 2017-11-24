@@ -1,0 +1,89 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.easyroute"
+        minSdkVersion 21
+        targetSdkVersion 25
+        versionCode 4
+        versionName "1.0.3"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+
+        sourceSets.main {
+            jniLibs.srcDir 'src/main/libs'
+            jni.srcDirs = [] //disable automatic ndk-build call
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+    lintOptions {
+        abortOnError false
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+}
+
+dependencies {
+    // JARs
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile files('libs/SKMaps.jar')
+    // Support libraries.
+    // Networking
+    compile('com.stanfy:gson-xml-java:0.1.+') {
+        exclude group: 'xmlpull', module: 'xmlpull'
+    }
+    // Google Play Services
+    //UI
+    compile project(':wheel')
+    compile('com.github.ozodrukh:CircularReveal:2.0.1@aar') {
+        transitive = true;
+    }
+    // Logging.
+    // INRIX SDK.
+    compile(name: 'com.inrix.sdk-6.2.0', ext: 'aar')
+    compile(name: 'com.inrix.sdk.cache-1.4', ext: 'aar')
+    compile project(':applink_security_lib')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile project(':sdl_android')
+    compile 'com.android.support:appcompat-v7:25.1.0'
+    compile 'com.android.support:design:25.1.0'
+    compile 'com.android.support:cardview-v7:25.1.0'
+    compile 'com.android.volley:volley:1.0.0'
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile 'com.google.code.ksoap2-android:ksoap2-android:3.6.2'
+    compile 'com.google.android.gms:play-services-base:10.0.1'
+    compile 'com.google.android.gms:play-services-maps:10.0.1'
+    compile 'com.google.android.gms:play-services-places:10.0.1'
+    compile 'com.google.android.gms:play-services-location:10.0.1'
+    compile 'com.google.android.gms:play-services-gcm:10.0.1'
+    compile 'com.google.maps.android:android-maps-utils:0.4.+'
+    compile 'com.google.firebase:firebase-core:10.0.1'
+    compile 'com.github.hotchemi:android-rate:1.0.1'
+    compile 'org.slf4j:slf4j-api:1.7.21'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha7'
+}
+
+
+
+
+
+
+
+apply plugin: 'com.google.gms.google-services'

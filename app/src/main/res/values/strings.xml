@@ -1,0 +1,125 @@
+<resources>
+    <string name="app_name">Easy Route</string>
+    <string name="open_navigation_drawer">Menüyü aç</string>
+    <string name="close_navigation_drawer">Menüyü kapat</string>
+    <string name="service_unexpected_error">Beklenmedik bir hata oluştu.</string>
+    <string name="network_connection_error">Bağlantı yok</string>
+
+    <!-- Globals -->
+    <string name="enable_location_services_alert_message">Lütfen cihazınızın Google konum hizmetini kullanarak konum özelliğini açın.</string>
+    <string name="current_location_is_beign_taken_snackbar_message">Konumunuz alınıyor, lütfen bekleyin</string>
+    <string name="google_api_client_connection_failed_alert_message">Google Harita Servisleri\'ne bağlanılamadı.</string>
+    <string name="your_location">Konumunuz</string>
+    <string name="price_unit">₺</string>
+    <string name="snackbar_retry_button">YENİDEN DENE</string>
+    <string name="default_validation">Girilmesi zorunlu alan</string>
+    <string name="fuel_type_gasoline">Benzin</string>
+    <string name="fuel_type_diesel">Dizel</string>
+    <string name="and">ve</string>
+    <string name="vehicle_type_class_1">1.Sınıf (Otomobil)</string>
+    <string name="vehicle_type_class_2">2.Sınıf (Minibüs)</string>
+    <string name="vehicle_type_class_3">3.Sınıf (Otobüs)</string>
+    <string name="vehicle_type_class_4">4.Sınıf (Kamyonet)</string>
+    <string name="vehicle_type_class_5">5.Sınıf (Treyler)</string>
+    <string name="vehicle_type_class_6">6.Sınıf (Motosiklet)</string>
+
+    <!-- SplashActivity -->
+    <string name="splash_activity_map_not_initialized_alert_message">Harita servislerine bağlanılamadı.</string>
+    <string name="splash_activity_exit_app_alert_button">ÇIKIŞ</string>
+    <string name="splash_activity_update_alert_message">Uygulamanın yeni versiyonu yayınlanmıştır, güncellemek ister misiniz?</string>
+    <string name="splash_activity_update_alert_positive_button">GÜNCELLE</string>
+
+    <!-- MainActivity -->
+    <string name="main_activity_my_location_permission_alert_message">Easy Route\'un size daha iyi hizmet verebilmesi için konum iznine ihtiyacı var.</string>
+    <string name="main_activity_my_location_permission_alert_positive_button">İZİN VER</string>
+    <string name="main_activity_my_location_permission_alert_negative_button">ÇIKIŞ</string>
+    <string name="main_activity_google_api_client_connection_failed_alert_message">Google Konum Servisleri\'ne bağlanılamadı.</string>
+    <string name="main_activity_google_api_client_connection_failed_alert_retry_button">YENİDEN DENE</string>
+    <string name="main_activity_find_route_method_error_snackbar_message">Rota alınamadı</string>
+
+    <!-- MainFragment -->
+    <string name="main_fragment_traffic_forecast_label">Trafik tahmini</string>
+    <string name="main_fragment_time_wheel_now_label">Şimdi</string>
+    <string name="main_fragment_source_location_default_label">Başlangıç noktası seçin</string>
+    <string name="main_fragment_destination_location_default_label">Varış noktası seçin</string>
+
+    <!-- RouteFragment -->
+    <string name="route_fragment_time_unit">dk</string>
+    <string name="route_fragment_distance_unit">km</string>
+    <string name="route_fragment_cost_unit">₺</string>
+    <string name="route_fragment_speed_unit">km/sa</string>
+    <string name="route_fragment_road_fares_label">Yol Ücretleri</string>
+    <string name="route_fragment_fuel_cost_label">Yakıt</string>
+    <string name="route_fragment_enter_vehicle_info_label">Rota maliyetinin hesaplanması için araç bilgilerinizi girmelisiniz. Araç bilgilerinizi girmek için</string>
+    <string name="route_fragment_enter_vehicle_info_click_label">tıklayın</string>
+    <string name="route_fragment_departure_time_label">Başlangıç Saatim</string>
+    <string name="route_fragment_arrival_time_label">Varış Saatim</string>
+    <string name="route_fragment_estimated_departure_label">Tahmini başlangıç</string>
+    <string name="route_fragment_estimated_arrival_label">Tahmini varış</string>
+    <string name="route_fragment_average_speed_label">Ort. hız</string>
+    <string name="route_fragment_fast_route_label">Hızlı</string>
+    <string name="route_fragment_economic_route_label">Ekonomik</string>
+    <string name="route_fragment_relax_route_label">Rahat</string>
+    <string name="route_fragment_single_route_label">Rotanız</string>
+    <string name="route_fragment_fast_economic_route_label">Hızlı ve Ekonomik</string>
+    <string name="route_fragment_fast_relax_route_label">Hızlı ve Rahat</string>
+    <string name="route_fragment_economic_relax_route_label">Ekonomik ve Rahat</string>
+    <string name="route_fragment_start_navigation_label">BAŞLAT</string>
+
+    <!-- PlaceAutoCompleteActivity -->
+    <string name="place_auto_complete_activity_home_address_label">Ev Adresiniz</string>
+    <string name="place_auto_complete_activity_workplace_address_label">İş Yeri Adresiniz</string>
+    <string name="place_auto_complete_activity_set_location_label">Konumu ayarla</string>
+    <string name="place_auto_complete_activity_set_home_address_hint">Ev adresinizi girin</string>
+    <string name="place_auto_complete_activity_set_work_address_hint">İş yeri adresinizi girin</string>
+    <string name="place_auto_complete_activity_recent_places_label">Geçmişinizden yerler</string>
+    <string name="place_auto_complete_activity_search_edittext_hint_default">Burada arama yapabilirsiniz</string>
+    <string name="place_auto_complete_activity_speech_to_text_dialog_title">Konuşun</string>
+    <string name="place_auto_complete_activity_speech_to_text_not_found_alert_message">Konuşma desteklenmiyor.</string>
+    <string name="place_auto_complete_activity_google_api_client_connection_failed_alert_message">Google Harita Servisleri\'ne bağlanılamadı.</string>
+    <string name="place_auto_complete_activity_google_api_client_connection_failed_alert_retry_button">YENİDEN DENE</string>
+
+    <!-- OptionsActivity -->
+    <string name="options_activity_accident">KAZA</string>
+    <string name="options_activity_road_closure">YOL KAPALI</string>
+    <string name="options_activity_hazard">TEHLİKE</string>
+    <string name="options_activity_congestion">TIKANIKLIK</string>
+    <string name="options_activity_construction">YOL ÇALIŞMASI</string>
+    <string name="options_activity_event">ETKİNLİK</string>
+    <string name="options_activity_police">POLİS</string>
+    <string name="options_activity_traffic_camera">TRAFİK KAMERASI</string>
+    <string name="options_activity_parking">PARK YERİ</string>
+
+    <!-- VehicleInfoDialog -->
+    <string name="vehicle_info_dialog_title">Araç Bilgileriniz</string>
+    <string name="vehicle_info_dialog_fuel_type_label">Yakıt Tipi</string>
+    <string name="vehicle_info_dialog_average_fuel_consumption_label">Ortalama Yakıt Tüketimi</string>
+    <string name="vehicle_info_dialog_in_city_label">Şehir içi (lt/100km)</string>
+    <string name="vehicle_info_dialog_out_city_label">Şehir dışı (lt/100km)</string>
+    <string name="vehicle_info_dialog_vehicle_type_label">Araç Tipi</string>
+    <string name="vehicle_info_dialog_gasoline_label">Benzin</string>
+    <string name="vehicle_info_dialog_diesel_label">Dizel</string>
+    <string name="vehicle_info_dialog_vehicle_type_vehicle_label">Binek</string>
+    <string name="vehicle_info_dialog_vehicle_type_truck_label">Kamyon</string>
+    <string name="vehicle_info_dialog_vehicle_type_commercial_label">Ticari</string>
+    <string name="vehicle_info_dialog_save_button">KAYDET</string>
+    <string name="vehicle_info_dialog_later_button">DAHA SONRA</string>
+    <string name="vehicle_info_dialog_delete_button">SİL</string>
+    <string name="vehicle_info_dialog_default_consumption_in_city">8</string>
+    <string name="vehicle_info_dialog_default_consumption_out_city">6.5</string>
+    <string name="vehicle_info_dialog_info_label">Yol ve yakıt maliyetlerinin hesaplanabilmesi için araç bilgilerinizi giriniz.</string>
+
+    <!-- NavigationActivity -->
+    <string name="navigation_activity_destination_reached_snackbar_message">Hedefinize vardınız</string>
+    <string name="navigation_activity_destination_reached_snackbar_action">NAVİGASYONDAN ÇIK</string>
+
+    <!-- PrivacyPolicyDialog -->
+    <string name="privacy_policy_dialog_title">Hizmet Şartları</string>
+    <string name="privacy_policy_dialog_positive_button">KABUL EDİYORUM</string>
+    <string name="privacy_policy_dialog_negative_button">HAYIR</string>
+    <string name="title_activity_lock_screen">LockScreenActivity</string>
+    <string name="title_activity_sdl_deneme">sdlDeneme</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_nav_deneme">NavDeneme</string>
+
+</resources>

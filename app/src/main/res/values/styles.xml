@@ -1,0 +1,62 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:textColorPrimary">@color/primary_dark_text</item>
+        <item name="android:textColorSecondary">@color/secondary_dark_text</item>
+        <item name="android:textColor">@color/primary_dark_text</item>
+        <item name="colorButtonNormal">@color/color_button_normal</item>
+        <item name="colorControlHighlight">@color/color_control_highlight</item>
+        <item name="buttonStyle">@style/AppTheme.Button</item>
+        <item name="android:windowBackground">@color/windowBackground</item>
+        <item name="alertDialogTheme">@style/AppTheme.AlertDialog</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.TransculentStatusBar" />
+
+    <style name="AppTheme.Transculent" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="AppTheme.Transculent.NoAnimation">
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <style name="AppTheme.Button" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="AppTheme.AlertDialog" parent="Base.Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/accent</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay.Dark" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="colorAccent">@color/white</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay.Dark" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.DarkLayoutOverlay" parent="ThemeOverlay.AppCompat.Dark" />
+
+    <style name="TextInputLayout" parent="Widget.Design.TextInputLayout">
+        <item name="colorAccent">@color/primary_dark_text</item>
+    </style>
+
+</resources>

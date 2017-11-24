@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="skobbler_api_key" translatable="false">d4cbbad7919d0a2296540eb756591fe31cb4da7d8d5ddcffe01f3cb327ef830e</string>
+    <string name="google_geo_api_key">AIzaSyBRd3uWApmn7MuCdD-v7ddoYArkPgakvrI</string>
+    <string name="inrix_app_key" translatable="false">8414c62f-9ff1-425c-99af-2ff0611df7c9</string>
+    <string name="inrix_app_id" translatable="false">f6f06313-2448-45c4-8640-0417664e388e</string>
+</resources>

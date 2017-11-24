@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "183440171832",
+    "firebase_url": "https://easyroute-161200.firebaseio.com",
+    "project_id": "easyroute-161200",
+    "storage_bucket": "easyroute-161200.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:183440171832:android:8555cba6ee402651",
+        "android_client_info": {
+          "package_name": "com.easyroute"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "183440171832-q6q69ukgjeaq81no49acg3253iffe7v6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.easyroute",
+            "certificate_hash": "a90b15dd0d9f396e10618958ce573bfd6373c05e"
+          }
+        },
+        {
+          "client_id": "183440171832-l9k9hmom7hbdetoimqjr3ukspgr7hj7d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArXnIBh2lnSlsT9JEYNVmQ8kLmAC2Dnss"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "183440171832-l9k9hmom7hbdetoimqjr3ukspgr7hj7d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

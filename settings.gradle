@@ -1,0 +1,1 @@
+include ':app', ':wheel', ':applink_security_lib', ':sdl_android'

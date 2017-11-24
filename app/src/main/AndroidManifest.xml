@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.easyroute">
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.usb.accessory"
+        android:glEsVersion="0x00020000"
+        android:required="false" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <uses-library android:name="com.android.future.usb.accessory" />
+
+        <meta-data
+            android:name="com.skobbler.ngx.API_KEY"
+            android:value="@string/skobbler_api_key" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_geo_api_key" />
+        <meta-data
+            android:name="com.inrix.appKey"
+            android:value="@string/inrix_app_key" />
+        <meta-data
+            android:name="com.inrix.appId"
+            android:value="@string/inrix_app_id" />
+
+        <activity
+            android:name=".ui.activity.SplashActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.TestActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.TransculentStatusBar" />
+        <activity
+            android:name=".ui.activity.NavigationActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.activity.PlaceAutoCompleteActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.activity.OptionsActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Transculent.NoAnimation" />
+        <activity
+            android:name=".Sdl.LockScreenActivity"
+            android:label="@string/title_activity_lock_screen"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.smartdevicelink.transport.USBAccessoryAttachmentActivity"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED"
+                android:resource="@xml/accessory_filter" />
+        </activity>
+
+        <service
+            android:name=".Sdl.SdlRouterService"
+            android:enabled="true"
+            android:exported="true"
+            android:process="com.smartdevicelink.router" />
+        <service android:name=".Sdl.AppLinkService" />
+        <service android:name="com.applink.security.AppLinkSecurity" />
+
+        <activity
+            android:name=".Sdl.SdlActivity"
+            android:label="@string/title_activity_sdl_deneme"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+
+        <receiver
+            android:name=".Sdl.SdlReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.smartdevicelink.USB_ACCESSORY_ATTACHED" />
+                <action android:name="android.bluetooth.device.action.ACL_CONNECTED" />
+                <action android:name="android.bluetooth.device.action.ACL_DISCONNECTED" />
+                <action android:name="android.media.AUDIO_BECOMING_NOISY" />
+                <action android:name="sdl.router.startservice" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".ui.activity.NavDeneme"
+            android:label="@string/title_activity_nav_deneme"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>
